@@ -1,0 +1,106 @@
+/*-------- header --------*/
+.header {
+  width: 100%; height: 51px;
+  border-bottom: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/*-------- category --------*/
+.category {
+  width: 100%;
+  padding: 8% 0 5% 3%;
+  box-sizing: border-box;
+}
+.category ul li {
+  display: inline-block;
+  margin-right: 3%;
+}
+.category ul li i {
+  color: #999;
+}
+
+/*-------- title --------*/
+.title {
+  height: 45px;
+  margin-bottom: 5%;
+}
+.title > div {
+  display: inline-block;
+  font-size: 0;
+  margin-right: 15px;
+  overflow: hidden;}
+.title .box {
+  width: 20px; height: 45px;
+  background-color: rgb(207, 7, 0);
+}
+.title .text {
+  height: 50px;
+  font-size: 20px;
+  line-height: 50px;
+}
+
+/*-------- text01 --------*/
+.text01 {
+  width: 95%;
+  font-size: 14px;
+  color: #666;
+  margin: 5% auto 8%;
+}
+
+/*-------- text02 --------*/
+.text02 {
+  width: 95%;
+  font-size: 14px;
+  text-align: justify;
+  column-count: 2;
+  margin: 0 auto;
+}
+
+/*-------- introduction_li --------*/
+#introduction_li_btn {display: none;}
+
+.introduction_li .close {display: none;}
+#introduction_li_btn:checked ~ .label .open {display: none;}
+#introduction_li_btn:checked ~ .label .close {display: block;}
+
+.introduction_li .sheet {display: none;}
+#introduction_li_btn:checked ~ .sheet {display: block;}
+
+.introduction_li {
+  width: 95%;
+  border: 5px solid #ccc; box-sizing: border-box;
+  margin: 5% auto;
+}
+.introduction_li .label {padding: 2% 0 2% 5%; box-sizing: border-box;}
+.introduction_li .sheet > li {
+  font-size: 14px;
+  border-top: 1px solid #999; box-sizing: border-box;
+  padding: 2% 0 2% 5%;
+}
+
+@media all and (min-width:769px) {
+  .wrap_box {
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+  }
+  
+  .wrap01 {
+    width: 70%;
+  }
+  .wrap01 .category {padding-left: 0;}
+  .wrap01 .text01,
+  .wrap01 .text02 {
+    width: 100%;
+    font-size: 16px;
+  }
+  .wrap01 .text01 {margin-bottom: 5%;}
+
+  .wrap02 {
+    width: 30%;
+    margin-top: 3%;
+    margin-right: 5%;
+    order: -1;
+  }
+  .footer {margin-top: 100px;}
+}
